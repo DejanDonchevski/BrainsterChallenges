@@ -1,0 +1,104 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+@use "sass:math";
+
+.banner {
+  position: relative;
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+
+    .hamburger {
+      display: none;
+    }
+
+    @include mix.tablet-styles {
+      height: 120px;
+      width: 100%;
+
+      ul {
+        display: none;
+      }
+
+      .footer {
+        display: none;
+      }
+
+      .hamburger {
+        display: inline-block;
+        position: absolute;
+        top: 27px;
+        right: 10px;
+        border: 1px solid var.$text-color-secondary;
+        color: var.$text-color-secondary;
+        padding: math.div(var.$gutter-base, 6);
+      }
+    }
+
+    ul {
+      margin: (var.$gutter-base * 2.5) (var.$gutter-base * 2);
+      padding-left: 0;
+    }
+
+    img {
+      margin: (var.$gutter-base * 2.5) (var.$gutter-base * 2);
+
+      @include mix.tablet-styles {
+        margin: (var.$gutter-base) (var.$gutter-base);
+      }
+    }
+
+    li {
+      list-style-type: none;
+      position: relative;
+
+      &:not(:last-child) {
+        padding-bottom: math.div(var.$gutter-base, 2);
+      }
+
+      a {
+        text-decoration: none;
+        color: var.$text-color-base;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 0%;
+          height: 2px;
+          background-color: black;
+
+          position: absolute;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      left: 50px;
+      color: var.$text-color-secondary;
+
+      P {
+        font-size: 13px;
+      }
+
+      a {
+        text-decoration: none;
+        color: var.$text-color-secondary;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
