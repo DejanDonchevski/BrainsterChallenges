@@ -70,7 +70,7 @@ img {
 }
 
 .col-60 {
-    width: 60%;
+    flex: 0 1 60%;
 }
 
 .col-50 {
@@ -78,19 +78,23 @@ img {
 }
 
 .col-40 {
-    width: 40%;
+    flex: 0 1 40%;
 }
 
 .col-33 {
-    width: 33.333%;
+    flex: 0 1 33.333%;
 }
 
 .t-center {
     text-align: center;
 }
 
-.height {
+.h-center {
     height: calc(100vh - 64px);
+}
+
+.h-20 {
+    height: 20vh;
 }
 
 .size-L {
@@ -136,8 +140,8 @@ hr {
 .inner i {
     color: #2791E6;
 }
-/* -------------------------------------------------------------------- */
 
+/* -------------------------------------------------------------------- */
 
 .header {
     background-image: linear-gradient(90deg, #000000 0%, white 0%, rgb(74 74 74 / 68%) 0%), url(./images/hero.jpg);
@@ -162,22 +166,18 @@ hr {
 
 .img-coast {
     background: url("./images/coast.jpg") no-repeat center / cover;
-    height: 20vh;
 }
 
 .img-island {
     background: url("./images/island.jpg") no-repeat center / cover;
-    height: 20vh;
 }
 
 .img-balloon {
     background: url("./images/balloon.jpg") no-repeat center / cover;
-    height: 20vh;
 }
 
 .img-mountain {
     background: url("./images/mountain.jpg") no-repeat center / cover;
-    height: 20vh;
 }
 
 .inner:not(:last-child) {
@@ -191,6 +191,7 @@ form {
 
 form input {
     width: 35%;
+    padding: 7px;
 }
 
 .social-media {
@@ -201,5 +202,84 @@ form input {
     margin-right: 15px;
 }
 
+/* -------------------------------------------------------------------- */
 /* MEDIA  */
 
+@media (max-width: 768px) {
+
+    .col-60 {
+        flex: 0 1 100%;
+    }
+
+    .col-40 {
+        flex: 0 1 100%;
+    }
+
+    .col-33 {
+        flex: 0 1 100%;
+        margin-bottom: 20px;
+    }
+
+    .col-33 p {
+        line-height: 33px;
+    }
+
+    form input {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    form button {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 23px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .navbar ul {
+        width: 100%;
+        padding-left: 0;
+        justify-content: space-between;
+    }
+
+    .header h1 {
+        font-size: 55px;
+    }
+
+    .header .col-50 p {
+        font-size: 23px;
+    }
+
+    .h-20 {
+        height: 50vh;
+        margin-bottom: 40px;
+    }
+
+    .section3 .container{
+        width: 60%;
+    }
+
+    .section3 i {
+        padding-bottom: 20px;
+    }
+
+    .col-40 hr {
+        width: 60%;
+    }
+
+    .section4 button {
+        margin: 0;
+        padding: 25px 30px;
+    }
+}
