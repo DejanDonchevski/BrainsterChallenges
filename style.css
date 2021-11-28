@@ -15,7 +15,69 @@ p,
 ul {
      margin-top: 0;
 }
+
+a {
+    text-decoration: none;
+}
   
 img {
     max-width: 100%;
+}
+
+/* GENERAL CLASSES */
+
+.flex {
+    display: flex;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.col-50 {
+    flex: 0 1 50%;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.height {
+    height: calc(100vh - 64px);
+}
+
+/* -------------------------------------------------------------------- */
+
+.header {
+    background-image: linear-gradient(90deg, #000000 0%, white 0%, rgb(74 74 74 / 68%) 0%), url(./images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.navbar {
+    padding: 15px 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navbar ul li {
+    list-style-type: none;
+}
+
+.navbar ul li:not(:last-child) {
+    margin-right: 20px;
 }
