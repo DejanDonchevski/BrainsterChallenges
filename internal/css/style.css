@@ -1,0 +1,225 @@
+/* CSS RESETS */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #648DAC; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.clear {
+    clear: both;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+     margin-top: 0;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    padding-bottom: 15px;
+}
+
+p {
+    line-height: 1.3rem;
+}
+
+.navbar-holder {
+    background-image: url('../../img/apple-devices.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding-bottom: 430px;
+    margin-bottom: 1rem;
+}
+
+.navbar-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 0 40px 0;
+}
+
+.logohold {
+    max-width: 100%;
+    float: left;
+}
+
+.logohold img {
+    width: 50px;
+}
+
+.menuholder {
+    width: 50%;
+    float: right;
+    text-align: right;
+}
+
+.menuholder ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    margin-top: 18px;
+}
+
+.menuholder ul .list-holder {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.menuholder ul .list-holder a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.menuholder ul .list-holder a:hover {
+    transition: .3s all ease;
+    color: yellowgreen;
+    border-bottom: 1px solid red;
+}
+
+.sectionTwo div {
+    width: 25%;
+    float: left;
+    text-align: center;
+    padding: 30px 0 40px 0;
+}
+
+.sectionTwo div i {
+    color: #000;
+    padding-bottom: 15px;
+    font-size: 60px;
+} 
+
+.sectionTwo div p {
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+} 
+
+.sectionTwo div:nth-child(1) {
+    background-color: #DBDBDB; 
+}
+
+.sectionTwo div:nth-child(2) {
+    background-color: #BDB9AB; 
+}
+
+.sectionTwo div:nth-child(3) {
+    background-color: #9CE0D2; 
+}
+
+.sectionTwo div:nth-child(4) {
+    background-color: #9FAEC1ce; 
+}
+
+.sectionThree {
+    width: 100%;
+}
+
+.sectionThree img {
+    width: 204px;
+}
+
+.imghold, .description {
+    float: left;
+    width: 50%;
+}
+
+.imghold {
+    background-color: #BFD6DF;
+    padding: 30px;
+    text-align: center;
+}
+
+.description {
+    background-color: #9FAEC1ce;
+}
+
+.inner {
+    padding: 35px 20px;
+    text-align: justify;
+}
+
+.bg-brown {
+    background-color: #BDB9AB;
+}
+
+.bg-orange {
+    background-color: #FAA58A;
+}
+
+.sectionFour {
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+}
+
+.block {
+    float: left;
+    width: 33.333%;
+}
+
+.bg-team {
+    background-color: #9FAEC1;
+}
+
+.bg-sallary {
+    background-color: #BDB9AB;
+}
+
+.bg-earnings {
+    background-color: #9CE0D2;
+}
+
+.socialmedia ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.socialmedia ul .list-holder {
+    display: inline-block;
+    padding: 80px;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.socialmedia ul .list-holder a {
+    color: white;
+}
+
+.footer {
+    text-align: center;
+    background-color: #57495A;
+    padding: 10px;
+}
+
+.footer p {
+    padding-top: 20px;
+    color: white;
+    font-size: 12px;
+}
+
+.sectionFour h2 {
+    padding-top: 10px;
+    color: black;
+}
+
+.sectionFour p {
+    color: white;
+}
