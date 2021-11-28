@@ -1,0 +1,21 @@
+/* CSS RESETS */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+  
+h1,
+h2,
+h3,
+p,
+ul {
+     margin-top: 0;
+}
+  
+img {
+    max-width: 100%;
+}
