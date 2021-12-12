@@ -15,35 +15,36 @@
         <!-- Latest Font-Awesome CDN -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     </head>
-    <body>
+    <body data-spy="scroll" data-target="#navbar" data-offset="0">
+
         <!-- FIRST SECTION -->
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
             <a class="navbar-brand text-uppercase" href="#">blogger</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a id="home" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a id="explore" class="nav-link" href="#">Explore</a>
+                        <a class="nav-link" href="#explore">Explore</a>
                     </li>
                     <li class="nav-item">
-                        <a id="create" class="nav-link" href="#">Create</a>
+                        <a class="nav-link" href="#create">Create</a>
                     </li>
                     <li class="nav-item">
-                        <a id="share" class="nav-link" href="#">Share</a>
+                        <a class="nav-link" href="#share">Share</a>
                     </li>
                 </ul>
         </nav>
         
-        <div id="home" class="banner d-flex justify-content-center align-items-center">
+        <div id="home" data-spy="scroll" data-target="#navbar" data-offset="0" class="banner d-flex justify-content-center align-items-center">
             <div class="container">
-                <div class="row py-10">
-                    <div class="col-7">
+                <div class="row">
+                    <div class="col-7 d-none d-lg-block">
                         <h1 class="text-white h2">Build <span class="text-danger">social profiles</span> and gain revenue and <span class="text-danger">profits</span></h1>
                         <ul>
                             <div class="d-flex align-items-start">
@@ -60,7 +61,7 @@
                             </div>
                         </ul>
                     </div>
-                    <div class="col-5 bg-darkblue py-4">
+                    <div class="col-12 col-lg-5 bg-darkblue py-4">
                         <form>
                             <h2 class="h5 text-white text-center">Sign Up Today</h2>
                             <p class="text-white text-center"><small>Please fill out this form to register</small></p>
@@ -77,7 +78,7 @@
         
         <!-- SECOND SECTION -->
 
-        <div id="explore" class="container-fluid">
+        <div id="explore" data-spy="scroll" data-target="#navbar" data-offset="0" class="container-fluid">
             <div class="row">
                 <div class="col-12 bg-dark text-light text-center py-4">
                     <h2 class="font-weight-bold">Explore</h2>
@@ -88,8 +89,112 @@
         </div>
 
         <!-- THIRD SECTION -->
-        
-        
+
+            <div class="container-fluid">
+                <div class="row py-5">
+                    <div class="col-12 col-lg-5 mb-4 mb-lg-0 offset-lg-1">
+                        <img src="./images/explore-section11.jpg" alt="#" class="w-100 rounded-circle">
+                    </div>
+                    <div class="col-12 col-lg-5 align-self-center">
+                        <h2>Explore & Connect</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, corrupti? Officiis voluptatem libero labore, sapiente id natus fugit reprehenderit voluptate nulla quaerat nam possimus! Modi qui voluptates voluptatum iste sequi!</p>
+                        <ul>
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-check-square fa-2x mr-4 rounded"></i>
+                                <p>Nulla ipsum cupidatat laboris aute amet. Nisi culpa cupidatat et laboris deserunt ut qui.</p>
+                            </div>
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-check-square fa-2x mr-4 rounded"></i>
+                                <p>Nulla ipsum cupidatat laboris aute amet. Nisi culpa cupidatat et laboris deserunt ut qui.<p>
+                            </div>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+
+        <!-- FORTH SECTION -->
+
+        <div id="create" data-spy="scroll" data-target="#navbar" data-offset="0" class="container-fluid">
+            <div class="row">
+                <div class="col-12 bg-darkblue text-light text-center py-4">
+                    <h2 class="font-weight-bold">Create</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci omnis tenetur reprehenderit odit voluptatum totam est repellat et beatae possimus nihil neque explicabo laudantium dolorem debitis nemo recusandae placeat, facilis nam nulla deserunt, voluptatem cum? Sunt, aperiam quaerat doloremque quisquam, in minima expedita omnis qui alias, sapiente maxime fugiat harum.</p>
+                    <button class="btn btn-outline-light text-capitalize">find out more</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- FIFTH SECTION -->
+
+            <div class="container-fluid bg-dark text-light">
+                <div class="row py-5">
+                    <div class="col-12 col-lg-5 mb-4 mb-lg-0 offset-lg-1 align-self-center">
+                        <h2>Create Your Passion</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, corrupti? Officiis voluptatem libero labore, sapiente id natus fugit reprehenderit voluptate nulla quaerat nam possimus! Modi qui voluptates voluptatum iste sequi!</p>
+                        <ul>
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-check icon text-primary mr-4 bg-light p-1 rounded"></i>
+                                <p>Nulla ipsum cupidatat laboris aute amet. Nisi culpa cupidatat et laboris deserunt ut qui.</p>
+                            </div>
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-check icon text-primary mr-4 bg-light p-1 rounded"></i>
+                                <p>Nulla ipsum cupidatat laboris aute amet. Nisi culpa cupidatat et laboris deserunt ut qui.<p>
+                                </div>
+                            </ul>    
+                        </div>
+                    <div class="col-12 col-lg-5 align-self-center">
+                        <img src="./images/create-section11.jpg" alt="#" class="w-100 rounded-circle">
+                    </div>
+                </div>
+            </div>
+
+        <!-- SIXTH SECTION -->
+        <div id="share" data-spy="scroll" data-target="#navbar" data-offset="0" class="container-fluid">
+            <div class="row">
+                <div class="col-12 bg-darkblue text-light text-center py-4">
+                    <h2 class="font-weight-bold">Share</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci omnis tenetur reprehenderit odit voluptatum totam est repellat et beatae possimus nihil neque explicabo laudantium dolorem debitis nemo recusandae placeat, facilis nam nulla deserunt, voluptatem cum? Sunt, aperiam quaerat doloremque quisquam, in minima expedita omnis qui alias, sapiente maxime fugiat harum.</p>
+                    <button class="btn btn-outline-light text-capitalize">find out more</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEVENTH SECTION -->
+
+        <div class="container-fluid">
+            <div class="row py-5">
+                <div class="col-12 col-lg-5 mb-4 mb-lg-0 offset-lg-1">
+                    <img src="./images/share-section11.jpg" alt="#" class="w-100 rounded-circle">
+                </div>
+                <div class="col-12 col-lg-5 align-self-center">
+                    <h2>Explore & Connect</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, corrupti? Officiis voluptatem libero labore, sapiente id natus fugit reprehenderit voluptate nulla quaerat nam possimus! Modi qui voluptates voluptatum iste sequi!</p>
+                    <ul>
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-check-square fa-2x mr-4 rounded"></i>
+                            <p>Nulla ipsum cupidatat laboris aute amet. Nisi culpa cupidatat et laboris deserunt ut qui.</p>
+                        </div>
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-check-square fa-2x mr-4 rounded"></i>
+                            <p>Nulla ipsum cupidatat laboris aute amet. Nisi culpa cupidatat et laboris deserunt ut qui.<p>
+                        </div>
+                    </ul>    
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+
+        <div class="container-fluid bg-dark text-light text-center py-4">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-uppercase">blogger</h2>
+                    <p>Copyright &copy; 2017</p>
+                    <button class="btn btn-primary">Contact Us</button>
+                </div>
+            </div>
+        </div>
+
         <!-- jQuery library -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         
