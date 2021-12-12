@@ -1,0 +1,8 @@
+.banner {
+  background: linear-gradient(90deg,#000000 0%,white 0%,rgba(12, 12, 12, 0.7) 0%), url("../images/home.jpg") no-repeat center/cover;
+  min-height: 100vh;
+}
+
+.bg-darkblue {
+  background-color: #4900D5;
+}
