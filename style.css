@@ -1,0 +1,89 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar-dark .navbar-brand {
+    color: rgba(255,255,255,.5);
+}
+
+.border-left {
+    border-left: 2px solid #dee2e6 !important;
+}
+
+.carousel-item, .carousel-inner, .carousel-inner img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.bg-img {
+    background-image: url("./Images/lights.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-img-2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Images/media.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.carousel-indicators li {
+    border: 1px solid white;
+    background-color: transparent;
+    width: 20px;
+    height: 2px;
+}
+
+.carousel-indicators .active {
+    background-color: white;
+    height: 4px;
+}
+
+.bg-black {
+    background-color: #000;
+}
+
+.bg-img-3 {
+    background-image: url("./img/image1.jpg");
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.h-60 {
+    height: 60vh;
+}
+
+.absolute-center {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.absolute-top {
+    transform: translateY(-200px);
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.f-14 {
+    font-size: 14px;
+}
+
+.bg-darkgray {
+    background-color: rgb(36, 34, 34);
+}
+
+.bg-blue {
+    background-color: #334FFE;
+}
