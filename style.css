@@ -81,11 +81,11 @@ html {
 }
 
 .bg-darkgray {
-    background-color: rgb(36, 34, 34);
+    background-color: rgb(36, 34, 34) !important;
 }
 
 .bg-blue {
-    background-color: #334FFE;
+    background-color: #334FFE !important;
 }
 
 .mt-10 {
