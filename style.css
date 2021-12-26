@@ -16,19 +16,15 @@ html {
 }
 
 .bg-img {
-    background-image: url("./Images/lights.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url("./Images/lights.jpg") no-repeat fixed center/cover;
 }
 
 .bg-img-2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Images/media.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Images/media.jpg") no-repeat fixed center/cover;
+}
+
+.bg-img-3 {
+    background: url("./Images/image1.jpg") no-repeat fixed top / cover;
 }
 
 .btn:focus {
@@ -51,13 +47,6 @@ html {
     background-color: #000;
 }
 
-.bg-img-3 {
-    background-image: url("./Images/image1.jpg");
-    background-attachment: fixed;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 .h-60 {
     height: 60vh;
@@ -66,6 +55,7 @@ html {
 .absolute-center {
     top: 50%;
     transform: translateY(-50%);
+    bottom: auto !important;
 }
 
 .absolute-top {
