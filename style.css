@@ -52,7 +52,7 @@ html {
 }
 
 .bg-img-3 {
-    background-image: url("./img/image1.jpg");
+    background-image: url("./Images/image1.jpg");
     background-attachment: fixed;
     background-position: top;
     background-repeat: no-repeat;
@@ -69,11 +69,11 @@ html {
 }
 
 .absolute-top {
-    transform: translateY(-200px);
+    transform: translateY(-250px);
 }
 
 .bg-red {
-    background-color: red;
+    background-color: red !important;
 }
 
 .f-14 {
@@ -86,4 +86,9 @@ html {
 
 .bg-blue {
     background-color: #334FFE;
+}
+
+.mt-10 {
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
