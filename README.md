@@ -1,3 +1,3 @@
 # BrainsterChallenges_DejanDonchevskiFS6
 
-Site Challenges se izraboteni na 1920x1080 rezolucija.
+ER Diagramot e nacrtant na slednata strana app.diagrams.net. Nemozev dobar screenshot da izvadam pa se nadevam vaka ne e problem.
