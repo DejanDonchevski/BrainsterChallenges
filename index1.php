@@ -1,13 +1,27 @@
 <?php
 
 function decimalToBinary($decimalNumber) {
+    if($decimalNumber < 0) {
+        return "-" . decbin(abs($decimalNumber));
+    }
+
     return decbin($decimalNumber);
 }
 
 
 function decimalToRoman($decimalNumber)
 {
+    $decimalNumber = abs($decimalNumber);
+
     $romanNumbers = [
+        "M̅" => 1000000,
+        "D̅" => 500000,
+        "C̅" => 100000,
+        "L̅" => 50000,
+        "X̅" => 10000,
+        "I̅X̅" => 9000,
+        "V̅" => 5000,
+        "I̅V̅" => 4000,
         "M" => 1000,
         "CM" => 900,
         "D" => 500,
@@ -45,8 +59,3 @@ function decimalToRoman($decimalNumber)
     }
     return $romanNumber;
 }
-
-
-echo decimalToBinary(3999); 
-echo "<br />";
-echo decimalToRoman(3999);

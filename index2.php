@@ -7,6 +7,14 @@ function binaryToDecimal($binaryNumber) {
 function romanToDecimal($romanNumber) {
 
     $romanNumbers = [
+        "M̅" => 1000000,
+        "D̅" => 500000,
+        "C̅" => 100000,
+        "L̅" => 50000,
+        "X̅" => 10000,
+        "I̅X̅" => 9000,
+        "V̅" => 5000,
+        "I̅V̅" => 4000,
         "M" => 1000,
         "CM" => 900,
         "D" => 500,
@@ -41,7 +49,3 @@ function romanToDecimal($romanNumber) {
 
     return $result;
 }
-
-echo romanToDecimal('MMCCXV');
-echo "<br />";
-echo binaryToDecimal('011001');
