@@ -26,6 +26,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if (count($_SESSION['required']) > 0) {
+        $_SESSION['oldusername'] = $username;
+        $_SESSION['oldemail'] = $email;
+
         redirectTo("signup.php");
     }
 

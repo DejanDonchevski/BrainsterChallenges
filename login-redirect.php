@@ -2,7 +2,7 @@
 
 session_start();
 
-require __DIR__ . "functions.php";
+require __DIR__ . "/functions.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];

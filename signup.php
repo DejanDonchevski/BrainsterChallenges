@@ -1,5 +1,5 @@
 <?php 
-session_start();
+require_once __DIR__ . "/functions.php";
 ?>
 
 
@@ -45,12 +45,28 @@ session_start();
                     <form action="signup-redirect.php" method="POST">
                         <div class="form-group">
                             <label for="username">Username:</label>
-                            <input type="text" id="username" name="username" class="form-control">
+                            <input type="text" id="username" name="username" class="form-control" value="<?php echo(isset($_SESSION['oldusername']) ? $_SESSION['oldeusername'] : ''); ?>">
+                            <?php if (isset($_SESSION['required']['username'])) { ?>
+                            <div class="text-danger">This field is required*</div>
+                            <?php } else if(isset($_SESSION['errors']['invalid_username']))?>
+
                         </div>
                         <div class="form-group">
                             <label for="password">Password:</label>
-                            <input type="password" id="password" name="password" class="form-control">
+                            <input type="text" id="password" name="password" class="form-control">
+                            <?php if (isset($_SESSION['required']['password'])) { ?>
+                            <div class="text-danger">This field is required*</div>
+                            <?php } else if(isset($_SESSION['errors']['password']))?>
+
                         </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" class="form-control" value="<?php echo(isset($_SESSION['oldemail']) ? $_SESSION['oldemail'] : ''); ?>">
+                            <?php if (isset($_SESSION['required']['email'])) { ?>
+                                <div class="text-danger">This field is required*</div>
+                            <?php } ?>
+                        </div>
+
                         <div class="form-group text-right">
                             <button type="submit" class="btn btn-primary px-4">Sign Up</button>
                         </div>
