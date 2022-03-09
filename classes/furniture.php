@@ -5,7 +5,7 @@ class Furniture
     private $width;
     private $length;
     private $height;
-    private $is_for_seating;
+    private $is_for_sitting;
     private $is_for_sleeping;
 
     public function __construct($width, $length, $height)
@@ -15,14 +15,14 @@ class Furniture
         $this->height = $height;
     }
 
-    public function getIs_for_seating()
+    public function getIs_for_sitting()
     {
-        return $this->is_for_seating;
+        return $this->is_for_sitting;
     }
 
-    public function setIs_for_seating($is_for_seating)
+    public function setIs_for_sitting($is_for_sitting)
     {
-        $this->is_for_seating = $is_for_seating;
+        $this->is_for_sitting = $is_for_sitting;
 
         return $this;
     }
@@ -85,12 +85,3 @@ class Furniture
         return $this;
     }
 }
-
-$f1 = new Furniture(10, 5, 10);
-$f1->setIs_for_seating(true);
-$f1->setIs_for_sleeping(false);
-// echo $f1->area();
-// echo "<br />";
-// echo $f1->volume();
-// echo "<br />";
-// echo "<hr />";

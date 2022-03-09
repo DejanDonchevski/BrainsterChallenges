@@ -7,7 +7,7 @@ class Chair extends Furniture implements Printable
 {
     public function print() 
     {
-        if($this->getIs_for_seating())
+        if($this->getIs_for_sleeping())
         {
             echo get_class($this) . ", is for sleeping." . " " . $this->area() . "cm2";
         } else {
@@ -22,12 +22,11 @@ class Chair extends Furniture implements Printable
     
     public function fullinfo()
     {
+        if($this->getIs_for_sleeping())
+        {
+            echo get_class($this) . ", is for sleeping." . " " . $this->area() . "cm2, width:" . $this->getWidth() . "cm, length:" . $this->getLength() . "cm, height:" . $this->getHeight() . "cm";
+        } else {
+            echo get_class($this) . ", sitting only." . " " . $this->area() . "cm2, width:" . $this->getWidth() . "cm, length:" . $this->getLength() . "cm, height:" . $this->getHeight() . "cm";
+        }
     }
 }
-
-$c1 = new Chair(1, 2, 3);
-$c1->setIs_for_seating(true);
-$c1->setIs_for_sleeping(false);
-$c1->print();
-echo "<br />";
-$c1->sneakpeek();

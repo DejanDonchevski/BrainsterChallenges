@@ -1,8 +1,9 @@
 <?php
 
 require_once __DIR__ . "/furniture.php";
+require_once __DIR__ . "/../interfaces/printable.php";
 
-class Sofa extends Furniture 
+class Sofa extends Furniture implements Printable
 {
     private $seats;
     private $armrests;
@@ -53,30 +54,29 @@ class Sofa extends Furniture
 
         return "This sofa is for sitting only, it has {$this->armrests} armrests and {$this->seats} seats.";
     }
+
+    public function print() 
+    {
+        if($this->getIs_for_sleeping())
+        {
+            echo get_class($this) . ", is for sleeping." . " " . $this->area() . "cm2";
+        } else {
+            echo get_class($this) . ", sitting only," . " " . $this->area() . "cm2";
+        }
+    }
+
+    public function sneakpeek()
+    {
+        echo get_class($this);
+    }
+    
+    public function fullinfo()
+    {
+        if($this->getIs_for_sleeping())
+        {
+            echo get_class($this) . ", is for sleeping." . " " . $this->area() . "cm2, width:" . $this->getWidth() . "cm, length:" . $this->getLength() . "cm, height:" . $this->getHeight() . "cm";
+        } else {
+            echo get_class($this) . ", sitting only." . " " . $this->area() . "cm2, width:" . $this->getWidth() . "cm, length:" . $this->getLength() . "cm, height:" . $this->getHeight() . "cm";
+        }
+    }
 }
-
-// $s1 = new Sofa(3, 6, 5);
-// $s1->setIs_for_seating(true);
-// $s1->setIs_for_sleeping(true);
-// $s1->setSeats(3);
-// $s1->setArmrests(2);
-// $s1->setLength_opened(10);
-// echo $s1->area();
-// echo "<br />";
-// echo $s1->volume();
-// echo "<br />";
-// echo $s1->area_opened();
-
-// echo "<hr />";
-
-// $s2 = new Sofa(4, 5, 6);
-// $s2->setIs_for_seating(true);
-// $s2->setIs_for_sleeping(false);
-// $s2->setSeats(5);
-// $s2->setArmrests(6);
-// $s2->setLength_opened(10);
-// echo $s2->area();
-// echo "<br />";
-// echo $s2->volume();
-// echo "<br />";
-// echo $s2->area_opened();
