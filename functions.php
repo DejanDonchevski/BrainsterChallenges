@@ -52,7 +52,7 @@ function isEmailValid($email) {
     $email = $_POST['email'];
     $charsBeforeAt = explode("@", $email);
     
-    if(strlen($charsBeforeAt[0]) > 5)
+    if(strlen($charsBeforeAt[0]) >= 5)
     {
         return true;
     }
