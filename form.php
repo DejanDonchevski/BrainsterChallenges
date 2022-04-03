@@ -3,6 +3,7 @@
 require_once __DIR__ . "/helpers/autoload.php";
 require_once __DIR__ . "/database/connection.php";
 
+
 $sql = "SELECT offers.*, company.offer_id AS company_offer 
         FROM offers JOIN company ON offers.id = company.offer_id
         WHERE 1=1 ";

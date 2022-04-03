@@ -2,3 +2,14 @@ html {
     scroll-behavior: smooth;
 }
 
+.p-top {
+    padding-top: 56px;
+}
+
+.t-subpadding {
+    padding-top: 25vh;
+}
+
+.size-card {
+    width: 23rem;
+}
