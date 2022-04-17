@@ -23,9 +23,7 @@
                     <a class="nav-link" href="#">Vehicle Registration<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <button class="btn text-primary my-2 my-sm-0" type="submit">Login</button>
-            </form>
+            <a href="./login.php" class="btn text-primary my-2 my-sm-0">Login</a>
         </div>
     </nav>
         

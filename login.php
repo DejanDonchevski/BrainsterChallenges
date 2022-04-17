@@ -17,12 +17,12 @@
     <body>
         
         
-        <form>
+        <form action="./login-redirect.php" method="POST">
             <div class="container mt-5">
                 <h1 class="text-center">Login Please</h1>
                 <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" name="email">
+                    <label for="email">Email address or Username</label>
+                    <input type="text" class="form-control" id="email" name="email">
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>

@@ -37,7 +37,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
     if($stmt->rowCount() > 0) 
     {
-        header('location: ./admin.php');
+        header('location: ./dashboard.php');
         die();
     }
 }
