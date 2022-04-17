@@ -10,6 +10,21 @@ $stmt = $conn->query($sql);
 $stmt1 = $conn->query($sql1);
 $stmt2 = $conn->query($sql2);
 
+if($_SERVER['REQUEST_METHOD'] == 'GET') 
+{
+    if(isset($_GET['id']))
+    {
+        $stmt = $conn->prepare('DELETE FROM vehicles WHERE id = ?;');
+        $id = isset($_GET['id']);
+        $stmt->execute([$id]);
+        if($stmt->rowCount() > 0) {
+            echo "Successfully deleted";
+            header('location: ./admin.php');
+            die();
+        }
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -135,27 +150,42 @@ $stmt2 = $conn->query($sql2);
                                     <th scope="col">vehicle chassis number</th>
                                     <th scope="col">vehicle production year</th>
                                     <th scope="col">registration number</th>
-                                    <th scope="col">fuel type</th>
                                     <th scope="col">registration to</th>
+                                    <th scope="col">fuel type</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Opel Astra</td>
-                                    <td>Hatchback</td>
-                                    <td>r235tl3</td>
-                                    <td>2007</td>
-                                    <td>SK-3355-AU</td>
-                                    <td>Diesel</td>
-                                    <td>29.06.2022</td>
-                                    <td>
-                                        <button class="btn btn-sm btn-danger">Delete</button>
-                                        <button class="btn btn-sm btn-warning">Edit</button>
-                                        <button class="btn btn-sm btn-success">Extend</button>
-                                    </td>
-                                </tr>
+                                <?php
+                                $stmt3 = $conn->query("SELECT vehicles.*, models.model, types.type, fuels.fuel FROM vehicles
+                                JOIN models ON vehicles.vehicle_model_id = models.id
+                                JOIN types ON vehicles.vehicle_type_id	= types.id
+                                JOIN fuels ON vehicles.fuel_type_id = fuels.id WHERE 1 ORDER BY id ASC;"); // WHERE vehicles.registration_number = ? ORDER BY id ASC; $stmt3->execute([$_POST['registration']]);
+
+                                if($stmt3->rowCount() > 0) 
+                                {
+                                    while($vehicle = $stmt3->fetch()) 
+                                    {   ?> 
+                                    <tr>
+                                        <td><?=$vehicle['id']?></td>
+                                        <td><?=$vehicle['model']?></td>
+                                        <td><?=$vehicle['type']?></td>
+                                        <td><?=$vehicle['chassis_number']?></td>
+                                        <td><?=$vehicle['production_year']?></td>
+                                        <td><?=$vehicle['registration_number']?></td>
+                                        <td><?=$vehicle['registration_to']?></td>
+                                        <td><?=$vehicle['fuel']?></td>
+                                        <td>
+                                            <a href="./admin.php?id=<?=$vehicle['id']?>" class="btn btn-sm btn-danger">Delete</a>
+                                            <a href="./edit.php?id=<?=$vehicle['id']?>" class="btn btn-sm btn-warning">Edit</a>
+                                            <a href="<?=$vehicle['id']?>" class="btn btn-sm btn-success">Extend</a>
+                                        </td>
+                                    </tr>
+                                <?php }
+                                } else {
+                                    echo "No vehicles found";
+                                }
+                                ?>
                             </tbody>
                         </table>
                     </div>

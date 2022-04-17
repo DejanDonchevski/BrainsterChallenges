@@ -33,4 +33,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         ":fuel_type_id" => $fuel_type,
     ]);
 
+    
+
+    if($stmt->rowCount() > 0) 
+    {
+        header('location: ./admin.php');
+        die();
+    }
 }
