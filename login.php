@@ -1,7 +1,13 @@
+<?php require_once __DIR__ . "/autoload.php";
+if (isLogged()) {
+    header("location: ./dashboard.php");
+    die();
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login Form</title>
+        <title>Login</title>
         <meta charset="utf-8" />
         <meta name="keywords" content="" />
         <meta name="description" content="" />

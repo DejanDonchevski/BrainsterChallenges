@@ -14,10 +14,13 @@ $stmt2 = $conn->query($sql2);
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') 
 {
-        $stmt = $conn->prepare('UPDATE vehicles SET chassis_number = ?, production_year = ?, registration_number = ?, registration_to = ?, vehicle_model_id = ?, vehicle_type_id = ?, fuel_type_id = ? WHERE id = ?;');
-        $stmt->execute([$_POST['vehicle_chassis'], $_POST['vehicle_production_year'], $_POST['vehicle_registration'], $_POST['registrated_to'], $_POST['vehicle_model'], $_POST['vehicle_type'], $_POST['fuel_type'], $_POST['id']]);
+        $stmt = $conn->prepare('UPDATE vehicles SET production_year = ?, registration_number = ?, registration_to = ?, vehicle_model_id = ?, vehicle_type_id = ?, fuel_type_id = ? WHERE id = ?;');
+        $stmt->execute([$_POST['vehicle_production_year'], $_POST['vehicle_registration'], $_POST['registrated_to'], $_POST['vehicle_model'], $_POST['vehicle_type'], $_POST['fuel_type'], $_POST['id']]);
         if($stmt->rowCount() > 0) {
             echo "Successfully updated";
+            header('location: ./dashboard.php');
+            die();
+        } else {
             header('location: ./dashboard.php');
             die();
         }
@@ -104,7 +107,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label for="vehicle_chassis">Vehicle chassis number</label>
-                                            <input type="text" name="vehicle_chassis" id="vehicle_chassis" value="<?=$vehicle['chassis_number']?>" class="form-control" disabled>
+                                            <input type="text" name="vehicle_chassis" id="vehicle_chassis" disabled value="<?=$vehicle['chassis_number']?>" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-6">

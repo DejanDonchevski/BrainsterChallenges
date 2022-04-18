@@ -23,7 +23,14 @@
                     <a class="nav-link" href="#">Vehicle Registration<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
-            <a href="./login.php" class="btn text-primary my-2 my-sm-0">Login</a>
+        
+            <?php
+                if(isLogged()) { ?>
+                    <a href="./logout.php" class="btn text-primary my-2 my-sm-0">Logout</a>
+                <?php } else { ?>
+                    <a href="./login.php" class="btn text-primary my-2 my-sm-0">Login</a>
+                <?php }
+            ?>
         </div>
     </nav>
         
