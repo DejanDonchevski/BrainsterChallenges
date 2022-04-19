@@ -4,8 +4,8 @@ require_once __DIR__ . "/autoload.php";
 
 if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
-    $model = isset($_POST['vehicle_model']);
-    $vehicle_type = isset($_POST['vehicle_type']);
+    $model = $_POST['vehicle_model'];
+    $vehicle_type = $_POST['vehicle_type'];
     $vehicle_chassis = $_POST['vehicle_chassis'];
     $vehicle_production_year = $_POST['vehicle_production_year'];
     $vehicle_registration = $_POST['vehicle_registration'];
@@ -13,25 +13,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     $registrated_to = $_POST['registrated_to'];
 
 
-    if (strlen($model) == 0 || strlen($vehicle_type) == 0 || strlen($fuel_type) == 0) {
-        $_SESSION["errors"] = "Those fields are required";
-    }
+    emptyFields($_POST);
 
-    $errors = [];
-    foreach($_POST as $key=>$value) 
-    {
-        if(empty($value)) {
-            if (isset($value)) {
-                $_SESSION[$key] = "This field is required";
-            }
-        }
-    }
-    $_SESSION["errors"] = $errors;
-
-    if (count($_SESSION["errors"]) >0) {
-        header("location: ./dashboard?errors=true");
+    if (count($_SESSION["fields"]) > 0) {
+        $_SESSION["errors"] = "All fields are required";
+        header("location: ./dashboard.php?errors=true");
         die();
     }
+
     $sql = "INSERT INTO vehicles(chassis_number, production_year, registration_number, registration_to, vehicle_model_id, vehicle_type_id, fuel_type_id) VALUES(:chassis_number, :production_year, :registration_number, :registration_to, :vehicle_model_id, :vehicle_type_id, :fuel_type_id)";
     
     $stmt = $conn->prepare($sql);
@@ -51,6 +40,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     if($stmt->rowCount() > 0) 
     {
         header('location: ./dashboard.php');
+        die();
+    } else {
+        echo "error";
         die();
     }
 }
