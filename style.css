@@ -1,0 +1,16 @@
+table, th, td {
+    border: 1px solid black;
+}
+
+.progress {
+    width: 100%;
+    background-color: lightgrey;
+}
+
+.myBar {
+    width: 100%;
+    height: 30px;
+    background-color: limegreen;
+    text-align: center;
+    color: white;
+}
