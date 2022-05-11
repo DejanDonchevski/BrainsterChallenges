@@ -49,6 +49,7 @@ let books = [
 ];
 
 let counter = 1;
+let colNames = Object.getOwnPropertyNames(books[0]);
 
 for (var i = 0; i < books.length; i++) {
   var book = books[i];
@@ -78,6 +79,7 @@ for (var i = 0; i < books.length; i++) {
   let row = document.createElement("tr");
   tBody.appendChild(row);
   row.setAttribute("id", "row" + counter);
+  rows.push(row)
   value.forEach((value) => {
     let cell = document.createElement("td");
     cell.innerText = value;
@@ -88,7 +90,6 @@ for (var i = 0; i < books.length; i++) {
   counter++;
 }
 
-let colNames = Object.getOwnPropertyNames(books[0]);
 colNames.push("Progress");
 
 colNames.forEach((element) => {
@@ -116,24 +117,11 @@ bookForm.addEventListener("submit", function (e) {
     document.getElementById("onPage").value);
   let maxpage = (maxPage.innerHTML = document.getElementById("maxPage").value);
 
-    // let allBooks = document.getElementById("allBooks");
-    // let books1 = document.getElementById("books");
-    // let bList = document.getElementById("bookList");
-    // let headRow = document.getElementById("headRow");
-    // let tBody = document.getElementById("tBody");
-    // let bookForm = document.getElementById("bookForm");
-    // let bookTitle = document.getElementById("bTitle");
-    // let bookAuthor = document.getElementById("bAuthor");
-    // let currentPage = document.getElementById("onPage");
-    // let maxPages = document.getElementById("maxPage");
-    // let button = document.getElementById("submitBtn");
-    // let rows = [];
-
   books.push({
     title: booktitle,
     author: bookauthor,
     onPage: currentpage,
-    maxPages: maxpage,
+    maxPages: maxpage
   });
 
   let newClass = "new" + count1;
@@ -151,7 +139,8 @@ bookForm.addEventListener("submit", function (e) {
 });
 
 function percRead(book) {
-  let percent = (book.onPage / book.maxPage) * 100;
+  let percent = (book.onPage / book.maxPages) * 100;
+  // console.log(book.maxPages)
   percent = Math.trunc(percent);
   return percent + "%";
 }
@@ -159,19 +148,19 @@ function percRead(book) {
 let c = 0;
 rows.forEach((row) => {
   let percent = percRead(books[c]);
-  cell = document.createElement("td");
-  cell.innerHTML = `<div class='progress'>
+  kelija = document.createElement("td");
+  kelija.innerHTML = `<div class='progress'>
         <div class='myBar'>
             <p>${percent}</p>
         </div>
     </div>`;
-  row.appendChild(cell);
+  row.appendChild(kelija);
   c++;
 });
 
 let bars = document.querySelectorAll(".myBar");
 let count = 0;
-bars.forEach(bar => {
+bars.forEach((bar) => {
   let width = percRead(books[count]);
   bar.style.width = width;
   count++;
