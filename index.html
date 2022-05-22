@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brainster's Trivia</title>
+        <meta charset="utf-8" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <link rel="stylesheet" href="/internal/css/style.css">
+
+        <!-- CSS for the AOS animations -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+        <!-- Latest compiled and minified Bootstrap 4.4.1 CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <!-- Latest Font-Awesome CDN -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    </head>
+    <body>
+        
+        <div id="loading" class="h1 justify-content-center align-items-center vh-100 d-flex">Loading Quiz, please wait</div>
+
+        <div class="container" id="content" style="display: none;">
+            <div class="p-4 p-md-5 mb-4 text-white text-center rounded bg-dark" data-aos="zoom-in" id="begin">
+                <div class="col-md-6 mx-auto">
+                    <h1 class="display-4 fst-italic">Welcome to Brainster's Trivia!</h1>
+                    <p class="lead my-3 border-bottom pb-3">Click on the start button to begin.</p>
+                    <button id="startGame" class="btn btn-success">Start</button>
+                </div>
+            </div>
+
+            <div class="p-4 p-md-5 mb-4 text-dark text-center rounded bg-light" id="inGame" data-aos="zoom-in" style="display: none;">
+                <div class="col-md-6 mx-auto">
+                    <h1 class="display-4 fst-italic">Good Luck!</h1>
+                    <p class="lead my-3 border-bottom pb-3">Click on the button to start over.</p>
+                    <button id="startOver" class="btn btn-warning">Start Over</button>
+                </div>
+            </div>
+
+            <div class="p-4 p-md-5 mb-4 text-dark text-center rounded bg-light" id="end" data-aos="zoom-in" style="display: none;">
+                <div class="col-md-6 mx-auto">
+                    <h1 class="display-4 fst-italic">Let's see your score!</h1>
+                    <p class="lead my-3 border-bottom pb-3">Click on the button to start again.</p>
+                    <button id="tryAgain" class="btn btn-danger">Try again</button>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div id="answers" class="col-sm-6"></div>
+            </div>
+
+            <div class="p-4 p-md-5 mb-4 text-dark text-center rounded bg-light mt-4" id="result data-aos="zoom-in" style="display: none;">
+                <div class="col-md-6 mx-auto">
+                    <h1 id="counterScore" class="display-4 fst-italic"></h1>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        
+        <!-- jQuery library -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+        <!-- Latest Compiled Bootstrap 4.4.1 JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <!-- JS script for the AOS animations -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- Initializing script for AOS animations -->
+        <script>
+            AOS.init();
+        </script>
+
+        <script src="/internal/js/main.js"></script>
+    </body>
+</html>
