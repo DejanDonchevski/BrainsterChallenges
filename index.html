@@ -8,10 +8,12 @@
         <meta name="author" content="" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <link rel="stylesheet" href="/internal/css/style.css">
-
+        
         <!-- CSS for the AOS animations -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+        
+        <!-- JS script for the AOS animations -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
         <!-- Latest compiled and minified Bootstrap 4.4.1 CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -21,9 +23,9 @@
     </head>
     <body>
         
-        <div id="loading" class="h1 justify-content-center align-items-center vh-100 d-flex">Loading Quiz, please wait</div>
+        <div id="loading" class="h1 justify-content-center align-items-center vh-100" style="display: flex;">Loading Quiz, please wait</div>
 
-        <div class="container" id="content" style="display: none;">
+        <div class="container" id="game" style="display: none;">
             <div class="p-4 p-md-5 mb-4 text-white text-center rounded bg-dark" data-aos="zoom-in" id="begin">
                 <div class="col-md-6 mx-auto">
                     <h1 class="display-4 fst-italic">Welcome to Brainster's Trivia!</h1>
@@ -52,7 +54,7 @@
                 <div id="answers" class="col-sm-6"></div>
             </div>
 
-            <div class="p-4 p-md-5 mb-4 text-dark text-center rounded bg-light mt-4" id="result data-aos="zoom-in" style="display: none;">
+            <div class="p-4 p-md-5 mb-4 text-dark text-center rounded bg-light mt-4" id="result" data-aos="zoom-in" style="display: none;">
                 <div class="col-md-6 mx-auto">
                     <h1 id="counterScore" class="display-4 fst-italic"></h1>
                 </div>
@@ -70,14 +72,12 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-        <!-- JS script for the AOS animations -->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
         <!-- Initializing script for AOS animations -->
         <script>
             AOS.init();
         </script>
 
-        <script src="/internal/js/main.js"></script>
+        <script src="./internal/js/main.js"></script>
     </body>
 </html>

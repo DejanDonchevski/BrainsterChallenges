@@ -1,9 +1,9 @@
 const API = `https://opentdb.com/api.php?amount=20`
 
-// Menu's
-const startGameMenu = document.getElementById('begin')
-const inGameMenu = document.getElementById('inGame')
-const finishGameMenu = document.getElementById('end')
+// 's
+const startGame = document.getElementById('begin')
+const inGame = document.getElementById('inGame')
+const finishGame = document.getElementById('end')
 
 // Buttons
 const startGameBtn = document.getElementById('startGame')
@@ -24,9 +24,9 @@ let correct_points = 0
 let questionId = 0
 
 startGameBtn.addEventListener('click', function(){
-    startGameMenu.style.display = 'none'
+    startGame.style.display = 'none'
 
-    inGameMenu.style.display = 'block'
+    inGame.style.display = 'block'
     resultsDiv.style.display = 'block'
     points.innerText = `Completed: 0/20`
 
@@ -49,7 +49,7 @@ window.addEventListener('load', function() {
     setTimeout(() => {
         loading.style.display = 'none'
 
-        document.getElementById('content').style.display = 'block'
+        document.getElementById('game').style.display = 'block'
     }, 2000);
 })
 
@@ -60,10 +60,10 @@ window.addEventListener('hashchange', function(){
             questionId++
             points.innerText = `Completed: ${i}/20`
         } else if (location.hash == '#question-20') {
-            inGameMenu.style.display = 'none'
+            inGame.style.display = 'none'
             answersDiv.style.display = 'none'
 
-            finishGameMenu.style.display = 'block'
+            finishGame.style.display = 'block'
             points.innerText = `Total Correct Answers: ${localStorage.getItem('correct_points')}/20`
         }
     }
