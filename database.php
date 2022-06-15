@@ -2,7 +2,7 @@
 
 $dbname = 'mysql:host=localhost;dbname=challenge17';
     $username = 'root';
-    $password = '';
+    $password = 'asdasdasd';
     $options = [];
 
    try {
