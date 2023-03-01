@@ -1,3 +1,3 @@
-# BrainsterChallenges_DejanDonchevskiFS6
+# BrainsterChallenges_DejanDonchevski
 
-Site Challenges se izraboteni na 1920x1080 rezolucija.
+All the challenges can be found in specific branches
